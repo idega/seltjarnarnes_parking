@@ -25,7 +25,7 @@
 			<roles />
 		</developer>
 	</developers>
-	
+
 	<dependencies>
 		<!-- Core dependencies -->
 		<dependency>
@@ -128,7 +128,7 @@
 			<groupId>com.idega.block.platform</groupId>
 			<artifactId>com.idega.block.process.webservice</artifactId>
 		</dependency>
-		
+
 		<!-- ADDON dependencies -->
 		<dependency>
 			<groupId>com.idega.block.addon</groupId>
@@ -228,7 +228,7 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		
+
 		<!-- Solution -->
 		<dependency>
 			<groupId>com.idega.block.private</groupId>
@@ -243,6 +243,7 @@
 		<dependency>
 			<groupId>com.idega.block.private</groupId>
 			<artifactId>com.idega.seltjarnarnes.parking</artifactId>
+			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
 
@@ -293,6 +294,11 @@
 
 	<build>
 	    <plugins>
+			<plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-surefire-plugin</artifactId>
+              <version>2.17</version>
+            </plugin>
 		    <plugin>
 		      <groupId>org.codehaus.mojo</groupId>
 		      <artifactId>buildnumber-maven-plugin</artifactId>
@@ -312,7 +318,7 @@
 		        </execution>
 		      </executions>
 		    </plugin>
-	    
+
 		    <plugin>
 		        <groupId>com.idega.maven.plugins</groupId>
 		        <artifactId>com.idega.maven.webapp</artifactId>
@@ -329,7 +335,7 @@
 		                <Implementation-Build>${buildNumber}</Implementation-Build>
 		                <Implementation-InceptionYear>${pom.inceptionYear}</Implementation-InceptionYear>
 		            </manifestEntries>
-		          </archive>          
+		          </archive>
 		        </configuration>
 	     	 </plugin>
 	    </plugins>
