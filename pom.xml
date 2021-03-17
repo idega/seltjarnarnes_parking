@@ -269,6 +269,12 @@
 		<dependency>
 			<groupId>com.idega.block.egov</groupId>
 			<artifactId>is.idega.idegaweb.egov.accounting</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>poi</groupId>
+					<artifactId>poi</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<!-- To fix fsk_course group type error in Hibernate -->
 		<dependency>
